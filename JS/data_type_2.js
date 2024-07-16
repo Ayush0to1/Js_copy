@@ -19,3 +19,13 @@
    console.log(typeof(age))
    console.log(typeof(active))
    //we should write code in readeable form.
+
+   console.log(2**3) //2^3=8
+
+   //Not important but it's confusing 
+   console.log(+true) //It will display 1 
+   //console.log(true+) It will display error
+   console.log(1+"2")  //It will display 12 
+   console.log(1+2+"3") //It will display 33 because first it sees number and add's it and then it joines.
+   console.log("1"+2+3) // It will display 123 because first it see string.
+   

@@ -6,4 +6,4 @@ let changeNumber=Number(rollNumber)
 console.log(typeof changeNumber)
 console.log(changeNumber)
 
-//If we put null--> 0, undefined-->NaN, true-->1
+//If we put variable to null--> 0, undefined-->NaN, true-->1 (and this is the problem)
