@@ -8,7 +8,7 @@
    3. boolean   =it's has two value true/false
    4. null      =it's treated as object in js. stand alone value.
    5. undefined =to create this use create the variable and don't assign it a value.
-   6. bigint   =It's used in share market etc
+   6. bigint   =It's used in share market etc (i.e 3423434353n)
    7. string
    
    object */
