@@ -28,9 +28,21 @@ const work= function(){
 }
 
 //+++++++++++++++++++++++++++++++ stack and heap +++++++++++++++++++++++++++++++
-// stack memory - primitive 
-// heap memory - reference
-
+// stack memory - primitive         //if we change the data(copy) original value will not be affected.
+var data="Rohit";
+information=data;
+information="Mohan"
+console.log(information);
+console.log(data);
+// heap memory - reference          //If we change the data(copy) than original value will be affected.
+var o_data={
+    name:"Hari",
+   email: "google.123@gmail.com"
+}
+var c_data=o_data
+c_data.email="Facebook.@gamil.com"
+console.log(o_data.email)
+console.log(c_data.email)
 
 
 
