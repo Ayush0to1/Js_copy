@@ -12,3 +12,7 @@ console.table([accountId, accountName, accountType, accountPassword]);
 
 // In order to display the output we should use "node.(file_name.js)"
 // If the file is in other folder then we should use "node (folder_name)/(file_name.js)"
+
+//accountId=9808;
+accountName="Try"
+console.log(accountName);
