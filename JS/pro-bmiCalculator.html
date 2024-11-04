@@ -7,13 +7,58 @@
     <style>
         *{
             text-align: center;
+            
         }
+        body{
+            margin:100px;
+        }
+        button{
+            margin-top:20px;
+            margin-bottom:30px;
+            padding-left: 40px; 
+            padding-right: 40px; 
+        }
+        .ui{
+            padding-top:30px;
+        }   
     </style>
 </head>
 <body>
 Body Mass Index Calculator
-    <script>
+<form class="ui">
+    <label for="height">Height in (Cm)</label> <input type="text" name="height" id="height"> <br> <br>
+    <label for="weight">Weight in (Kg)</label> <input type="text" name="weight" id="weight"> <br>
+    <button>Ok</button>
+</form>
+<div class="result"></div> <br> <hr>
+<p>Healthy BMI range: 18.5 kg/m<sup>2</sup> - 24.9 kg/m<sup>2</sup></p>
+<p>Underweight BMI range: less than 18.4 kg/m<sup>2</sup> </p>
+<p>Over Weight BMI range: 25 kg/m<sup>2</sup> - 39.9 kg/m<sup>2</sup></p>
+<p>Danger Weight BMI range: Greater > 40 kg/m<sup>2</sup></p>
 
+    <script>
+        const hold=document.querySelector('form');
+        const result=document.querySelector('.result')
+        console.log(result);
+        
+        hold.addEventListener('submit', (data)=>{
+            data.preventDefault();
+                // Take data from form
+                const height=parseInt(document.querySelector('#height').value);
+                const weight=parseInt(document.querySelector('#weight').value);
+                if(height==='' || isNaN(height) || height<2){
+                    result.innerHTML="Invalid height.";
+                }
+                else if(weight==='' || isNaN(weight) || weight<2){
+                    result.innerHTML="Invalid weight.";
+                }
+                else{
+                    const res=(weight/((height*height)/10000)).toFixed(2);
+                    result.innerHTML=res;
+                }
+        });
+    
+        
     </script>
 </body>
 </html>
