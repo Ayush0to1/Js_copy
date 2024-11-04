@@ -2,7 +2,7 @@
 console.log("Started")
 //Learning about variable, constant.
 const accountId=13711           // It's constant that is defined by "const"
-var accountName="User_TD"       //It's a variable thta can be defined by "var","let",or nothing.
+var accountName="User_TD"       //It's a variable that can be defined by "var","let",or nothing.
 let accountType="Public"        //It's used as variable in most cases. because it support scope. i.e:{}
 accountPassword="HuhuHooooo"
 // Remember "const" can not be changed
@@ -16,3 +16,4 @@ console.table([accountId, accountName, accountType, accountPassword]);
 //accountId=9808;
 accountName="Try"
 console.log(accountName);
+typeof(accountName);

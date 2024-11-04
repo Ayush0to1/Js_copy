@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Bg-Color</title>
+    <style>
+        span{
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            margin:10px;
+            border-color: rgb(0, 0, 0);
+            border-radius: 50%;
+        }
+        #yellow{
+            background-color:yellow;
+        }
+        #blue{
+            background-color:blue;
+        }
+        #brown{
+            background-color:brown;
+        }
+        #green{
+            background-color:green;
+        }
+
+        *{
+            text-align: center;
+        }
+        h1, h2{
+        margin:50px;
+      }
+    </style>
+</head>
+<body>
+    <h1>Change the background color</h1>
+    <h2>Select the below colors:-</h2>
+
+    <span class="color" id="yellow"> </span>
+    <span class="color" id="blue"> </span>  <br>
+    <span class="color" id="brown"> </span>
+    <span class="color" id="green"> </span>
+
+    <script>
+        const color=document.querySelectorAll('.color');
+        const body=document.querySelector('body');
+        console.log(color);
+
+        color.forEach((check)=>{
+                check.addEventListener('click',(e)=>{
+// console.log(e.target);      -> with this we are getting clicked span tag with its detail.
+// console.log(e.target.id);   -> with this we are getting clicked span tag id name.
+                if(e.target.id==="yellow"){
+                    body.style.backgroundColor=e.target.id;
+                }     
+                else if(e.target.id==="blue"){
+                    body.style.backgroundColor=e.target.id;
+                }     
+                else if(e.target.id==="brown"){
+                    body.style.backgroundColor=e.target.id;
+                }     
+                else if(e.target.id==="green"){
+                    body.style.backgroundColor=e.target.id;
+                }     
+                });
+        });
+        
+        
+        </script>
+</body>
+
+</html>

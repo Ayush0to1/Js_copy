@@ -14,7 +14,7 @@ console.log(user["name"])       // Here we cannot use user.name
 console.log(user.age) 
 // To access symbole in object
 console.log(user[id])
-//Object.freeze(name)             //It is used to make variable to have same value(we can't change the value of that variables.)
+// Object.freeze(name)             //It is used to make variable to have same value(we can't change the value of that variables.)
 
 // Creating a funtion for object
 user.greeting=function(){
