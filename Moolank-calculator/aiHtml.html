@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Your Moolank</title>
+    <!-- <script src="Ai_js.js"></script> -->
+    <link rel="stylesheet" href="aiCss.css">
+</head>
+<body>
+    <header>
+        <h1 style="display: inline;">Moolank Calculator</h1>
+    </header>
+    <main class="pageCenter">
+    <div class="container">
+        <div class="header">
+            
+            <img src="star.png" alt="" height="250px" style="display:inline;
+            position:relative; top:5px" border-radius:40%;
+           >
+           
+            <h1>Find Your personality</h1>
+           
+            <p>According to Vedic astrology, Moolank influences one's innate characteristics, talents, and natural inclinations.
+                </p>
+        </div>
+       
+        <div class="form-container">
+            <form class="input-group">
+            <label for="birthdate">Enter Your Birth Date</label>
+                <input type="number" id="birthdate" placeholder="day in AD"> <br>
+                <button class="calculate-button">Calculate My Moolank</button>
+            </form>
+        </div>
+        
+        <!-- Result section (initially hidden) -->
+        <div class="result-container">
+            <div class="points"> <b style="font-size:30px;"> Moolank Number</b><br> 
+            <span id="moolank" style="font-size:40px;"></span>
+            </div> <br>
+
+            <div class="points">Nature <br> 
+            <span id="nature"></span>
+            </div> <br>
+
+            <div class="points">Lucky Color <br>
+            <span id="luckyColor"></span>    
+            </div> <br>
+
+            <div class="points">Lucky Number <br> 
+            <span id="luckyNumber"></span>
+            </div>  <br>
+            
+            <div class="points">Tips <br>
+            <span id="tips"></span> 
+            </div> 
+            <button class="reset">Reset</button>
+        </div>
+        
+    </div>
+    </main>
+             <footer style="text-align: center;">
+             Calculate your Moolank (मूलांक) based on your birth date to reveal your destiny number
+             </footer>
+</body>
+<script>
+const form=document.querySelector(".input-group ");
+const result=document.querySelector(".result-container")
+const moolank=document.querySelector("#moolank");
+const nature=document.querySelector("#nature");
+const luckyColor=document.querySelector("#luckyColor")
+const luckyNumber=document.querySelector("#luckyNumber")
+const tips=document.querySelector("#tips");
+const hide1=document.querySelector(".header");
+const hide2=document.querySelector(".form-container");
+const reset=document.querySelector(".reset")
+
+console.log(nature);
+
+console.log(form);
+form.addEventListener('submit', (i)=>{
+    i.preventDefault();
+    const val=document.querySelector('#birthdate').value;
+    if(val<0 || val>33){
+        result.innerHTML="Invalid Input"
+    }
+//Val is string.
+  console.log(typeof(val));
+
+  let a=parseInt(val[0]);
+  let b=parseInt(val[1]);
+  let sum=0;
+  if(val>=10){ 
+// Now a,b sum is integer.
+  sum = a+b;
+  }
+  else{ 
+    sum=a;
+  }
+  // all ok here (interger)
+  
+  switch(sum){
+
+
+    case 1:
+        result.style.display="block";
+        hide1.style.display="none";
+        hide2.style.display="none";
+
+        moolank.innerHTML="1";
+        nature.innerHTML="Nature like Sun a giver or leader, People trust you, aggreesive, ego, can't dominate by other, risk taker, leadership, strong physics" ;
+        luckyColor.innerHTML="Yellow or (Color like sun)";
+        luckyNumber.innerHTML="1,2,7";
+        tips.innerHTML="you can achive success if not change career,  love relation not so good (broken, by time) Career = army, police, politics, business";
+        break;
+
+    case 2:
+    result.style.display="block";
+        hide1.style.display="none";
+        hide2.style.display="none";
+    moolank.innerContent="2";
+        nature.innerHTML="Nature like moon, change career/hobbies,  emotion unstable, you trust people and try to understand them, can't take proper decision,  people want to connect you (opposite), you like peace, healing property";
+        luckyColor.innerHTML="white, light green";
+        luckyNumber.innerHTML="3,5,7,1";
+        tips.innerHTML="meditation , don't reveal your emotion of other quickly. Career = doctor, nurse, nature lover, artist ";
+        break;
+
+        case 3:
+        result.style.display="block";
+        hide1.style.display="none";
+        hide2.style.display="none";
+        moolank.innerHTML="3";
+        nature.innerHTML="Jupiter nature, knowledge of different field, hard working,  family problem, best friend for other, money minded, don't like to take help form other, it connect with power people" ;
+        luckyColor.innerHTML=" red, yellow, orange";
+        luckyNumber.innerHTML="1,5,3";
+        tips.innerHTML="Career = do your own work  Real Estate, Property Dealer, Construction, Music, Singing, Artistic, Composer, Civil Engineering, Architect, Interior Designing, CA, Banker";
+        break;
+
+        case 4:
+        result.style.display="block";
+        hide1.style.display="none";
+        hide2.style.display="none";
+        moolank.innerHTML="4";
+        nature.innerHTML="Hard Working, create original idea/product, don't belive in traditional process, small friend circle, argument winner, give priority to security,  " ;
+        luckyColor.innerHTML="light color";
+        luckyNumber.innerHTML="1,6,7";
+        tips.innerHTML="Be spritual, meditation, learn to say NO, donate food to other, Career = Technical work, Doctor fields";
+        break;
+
+        case 5:
+        result.style.display="block";
+        hide1.style.display="none";
+        hide2.style.display="none";
+        moolank.innerHTML="5";
+        nature.innerHTML="Mentally strong but lazy, fleaxiable nature, good communication skill, money minded, risk taker, multiple relationship, big friend circle in childhood but opposite in adult, cute/good looking, stressfull mind, stomach problem, Never give up attitude." ;
+        luckyColor.innerHTML="green light shades of brown and white";
+        luckyNumber.innerHTML="1,3,5,6,7,8";
+        tips.innerHTML="wear green emerald stone, Do yoga and exercise. Career = Business, import/Export in foreign";
+        break;
+
+        case 6:
+        result.style.display="block";
+        hide1.style.display="none";
+        hide2.style.display="none";
+        moolank.innerHTML="6";
+        nature.innerHTML="They likes luxuary lifestyle, cleaness, like some art form, multiple relationship, lovers, good looking people" ;
+        luckyColor.innerHTML="multi color, white, blue";
+        luckyNumber.innerHTML="1,2,7,8";
+        tips.innerHTML="Downfall starts if they drink alchol etc, don't share too many thing. Career = Designer, broker, luxary business, arists";
+        break; 
+
+        case 7:
+        result.style.display="block";
+        hide1.style.display="none";
+        hide2.style.display="none";
+
+        moolank.innerHTML="7";
+        nature.innerHTML="Big Dreamer, confuse, overthinking, give love to other, multi tasker, active person, very sensative, some time people think you like to show off things, good gut feeling" ;
+        luckyColor.innerHTML="smoky brown, bright yellow, blue, green";
+        luckyNumber.innerHTML="1,2,3,5";
+        tips.innerHTML="Don't do money help, you get problems of heart and body, worship sun god, don't expert anything from other, gym, meditation,  Carrer = Researcher";
+        break;
+
+        case 8:
+        result.style.display="block";
+        hide1.style.display="none";
+        hide2.style.display="none";
+        moolank.innerHTML="8";
+        nature.innerHTML="Multi-tasker, some times shows aggression, most of the time life problem, struggle, social worker, boss favourite, other take credit of your work, money manger, likes discipline, less friend circle, less talk, kind person, fall in depression " ;
+        luckyColor.innerHTML="black, dark blue, grey, purple";
+        luckyNumber.innerHTML="3,5,6";
+        tips.innerHTML="If they keep doing hardworking for long period of time then get success, do not apply short cut in life, and don't steal anything form other, Donate something. Career = Real state, law etc";
+        break;
+
+        case 9:
+        result.style.display="block";
+        hide1.style.display="none";
+        hide2.style.display="none";
+        moolank.innerHTML="9";
+        nature.innerHTML="Very angry people, stress problem, blood related problem, some times court case by other, less friend, like to say truth, straight-forward, beautiful, multiple relationship, discipline, Bossy nature, accident problem form cars, creative, don't trust other, have very high energy " ;
+        luckyColor.innerHTML="light color";
+        luckyNumber.innerHTML="1,2,3";
+        tips.innerHTML="relationship problem so manage it, express feeling, meditation, Career = Real state, own business, Gym, politics etc ";
+        break;
+
+        default:
+            result.innerHTML="Error, Refresh and enter number 1-31";
+
+  } 
+  
+  reset.addEventListener('click',()=>{
+    result.style.display="none";
+        hide1.style.display="block";
+        hide2.style.display="block";
+  })
+    
+
+    
+
+})
+
+
+</script>
+</html>
